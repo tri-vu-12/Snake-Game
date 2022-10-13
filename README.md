@@ -38,6 +38,7 @@ Track your progress with the project by updating the checkmarks down below
 - [ ] Add default body parts
 - [ ] Handle updating the snake body when the head moves
 - [ ] Detect collisions with the body
+- [ ] Update image parts for the snake
 
 # Next.js Documentation
 
