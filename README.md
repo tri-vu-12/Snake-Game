@@ -22,7 +22,7 @@ Track your progress with the project by updating the checkmarks down below
 
 **All these changes can be made in `./game/studentCode.ts`**
 
-- [ ] getGridSize - you can change it from 10 to something, to see how it changes, but return to 10 after
+- [x] getGridSize - you can change it from 10 to something, to see how it changes, but return to 10 after
 - [ ] getBoardSpeedMs - we can explain it, but we will need to go back to it after the snake is moving
 - [ ] createApple - change from going to the first cell to a random cell
 - [ ] getDirection - we can explain how switch statements work and enums (for the Direction enum)
