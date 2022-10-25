@@ -1,3 +1,4 @@
+import { Dir } from "fs";
 import CellItem from "./cellItem";
 import Collision from "./collistion";
 import Coordinate from "./coordinate";
@@ -27,7 +28,9 @@ export class BoardHelper implements IBoardHelper {
      * @returns the new cell item
      */
     createApple(freeCells: Coordinate[]): CellItem {
-        return new CellItem(new Coordinate(0, 0), 'red');
+        let x = freeCells.length;
+
+        return new CellItem(freeCells[Math.floor(Math.random()*98)], 'red');
     }
 
     /**
@@ -36,6 +39,22 @@ export class BoardHelper implements IBoardHelper {
      * @returns the associated direction, or null if not an accepted key code
      */
     getDirection(keyBoardEvent: KeyboardEvent): Direction | null {
+        console.log(keyBoardEvent.code)
+        switch(keyBoardEvent.code) {
+            case "KeyA":
+            return Direction.LEFT
+
+            case "KeyD":
+            return Direction.RIGHT
+
+            case "KeyW":
+            return Direction.UP
+
+            case "KeyS":
+            return Direction.DOWN
+
+
+        }
         return null;
     }
 }
@@ -71,7 +90,7 @@ export class Snake implements ISnake {
      * @param direction the diection to move the snake in
      */
     update(direction: Direction): void {
-
+        console.log(direction)
     }
 
     /**
