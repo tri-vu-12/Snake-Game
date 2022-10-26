@@ -91,6 +91,24 @@ export class Snake implements ISnake {
      */
     update(direction: Direction): void {
         console.log(direction)
+        const snakeHeadCoordinate = this.snakeHead.coordinate;
+        switch(direction) {
+            case Direction.LEFT:
+                snakeHeadCoordinate.x--
+            break;
+    
+            case Direction.RIGHT:
+                snakeHeadCoordinate.x++
+            break;
+
+            case Direction.UP:
+                snakeHeadCoordinate.y++
+            break;
+
+            case Direction.DOWN:
+                snakeHeadCoordinate.y--
+            break;
+        }
     }
 
     /**
